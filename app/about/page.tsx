@@ -1,8 +1,7 @@
-'use client';
-
-import React from 'react';
+import React from 'react'
 import Outbrain from '@/components/ads/outbrain';
-import { Metadata } from 'next';
+
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'About',
@@ -13,6 +12,8 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
+
+    
       <div className="bg-gray-50 text-gray-800 min-h-screen">
         {/* Header */}
         <header className="bg-gray-900 text-white py-10 text-center">
@@ -85,14 +86,15 @@ const About = () => {
         </main>
       </div>
 
-      <aside className="max-w-7xl mt-30 mx-auto">
+ <aside className="max-w-7xl mt-30 mx-auto">
         <div className="OUTBRAIN outbrain-desktop" data-widget-id="AR_1"></div>
-        <div className="OUTBRAIN outbrain-mobile" data-widget-id="CRMB_1"></div>
+<div className="OUTBRAIN outbrain-mobile" data-widget-id="CRMB_1"></div>
       </aside>
 
       <Outbrain />
-    </>
-  );
-};
 
-export default About;
+    </>
+  )
+}
+
+export default About

@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
-
-    
       <div className="bg-gray-50 text-gray-800 min-h-screen">
         {/* Header */}
         <header className="bg-gray-900 text-white py-10 text-center">
@@ -39,7 +37,7 @@ const About = () => {
               Stock Wealth is a digital platform dedicated to empowering individuals with the tools, knowledge, and mindset needed to thrive in the world of investing. Our team of financial analysts, traders, and educators is passionate about guiding you on your wealth-building journey.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
-              Whether you're a beginner or a seasoned investor, we aim to simplify stock investing and help you stay ahead in today’s dynamic markets.
+              Whether you&apos;re a beginner or a seasoned investor, we aim to simplify stock investing and help you stay ahead in today&rsquo;s dynamic markets.
             </p>
           </section>
 
@@ -50,7 +48,7 @@ const About = () => {
               Our mission at Stock Wealth is to educate, inspire, and support individuals on their path to financial freedom. We break down complex market trends, demystify stock strategies, and promote a long-term wealth mindset to help you invest smarter.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
-              We value transparency, integrity, and actionable insights — every article, review, and analysis is created with these principles in mind.
+              We value transparency, integrity, and actionable insights &mdash; every article, review, and analysis is created with these principles in mind.
             </p>
           </section>
 
@@ -72,7 +70,7 @@ const About = () => {
               At Stock Wealth, we uphold rigorous editorial standards. Our content is thoroughly researched and based on credible sources, technical analysis, and fundamental data.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
-              We avoid hype and clickbait — our focus is delivering clear, educational, and empowering content you can trust.
+              We avoid hype and clickbait &mdash; our focus is delivering clear, educational, and empowering content you can trust.
             </p>
           </section>
 
@@ -80,21 +78,20 @@ const About = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Who Reads Stock Wealth?</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              Our readers range from new investors and students to experienced traders and financial advisors. Whether you're looking to understand the market, build your first portfolio, or optimize your strategy, Stock Wealth is here to support your success.
+              Our readers range from new investors and students to experienced traders and financial advisors. Whether you&apos;re looking to understand the market, build your first portfolio, or optimize your strategy, Stock Wealth is here to support your success.
             </p>
           </section>
         </main>
       </div>
 
- <aside className="max-w-7xl mt-30 mx-auto">
+      <aside className="max-w-7xl mt-30 mx-auto">
         <div className="OUTBRAIN outbrain-desktop" data-widget-id="AR_1"></div>
-<div className="OUTBRAIN outbrain-mobile" data-widget-id="CRMB_1"></div>
+        <div className="OUTBRAIN outbrain-mobile" data-widget-id="CRMB_1"></div>
       </aside>
 
       <Outbrain />
-
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

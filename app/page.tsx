@@ -9,7 +9,6 @@ import money from '@/constants/money'
 import politics from '@/constants/politics'
 import usNews from '@/constants/usnews'
 import Link from "next/link";
-import Post2 from '@/components/Post2'
 import CreationDate from '@/components/Date';
 
 const page = () => {

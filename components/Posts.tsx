@@ -27,7 +27,7 @@ const Posts: React.FC<PostProps> = ({ pimg, pheading , articleNumber}) => {
           <Image
             src={pimg}
             className="h-[400px] w-auto sm:h-[300px] md:h-[250px] xl:h-[300px]  object-cover transition-transform duration-300 ease-in-out
-                    hover:scale-105 hover:brightness-110 rounded-[12px]"
+                    hover:scale-105 hover:brightness-110 rounded-[18px]"
             width={1000}
             height={1000}
             alt="Post Image"

@@ -71,7 +71,7 @@ const Blogs = ({
                 alt="" 
                 width={100} 
                 height={100} 
-                className="rounded-full object-cover object-center  size-14 "
+                className="rounded-[16px] object-cover object-center  size-14 "
   />
                 <div>
                 <p className='text-black font-medium mt-1 ml-4 text-lg md:text-xl'>{author}</p>

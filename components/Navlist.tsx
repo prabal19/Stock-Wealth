@@ -72,20 +72,20 @@ const Navlist: React.FC<PostListingPageProps> = ({ pageTitle, posts }) => {
           </div>
 
           {/* Regular Posts */}
-          <div className="grid mt-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center w-full mx-auto">
+          <div className="grid mt-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center w-full mx-auto ">
             {regularPosts.map((post, index) => (
               <Link
                 key={index}
                 href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
                 passHref
-                className="bg-white p-4 lg:p-0"
+                className="bg-white p-4 hover:shadow-md rounded-[18px] "
               >
                 <Image
                   src={`/articles/${post.imgUrl}`}
                   width={1000}
                   height={1000}
                   alt={post.title}
-                  className="h-[250px] xl:h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110"
+                  className="h-[250px] xl:h-[200px] object-cover rounded-[18px] transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110"
                 />
                 <h2 className="mt-3 text-xl text-left font-bold text-black">{post.title}</h2>
                 <p className="text-gray-500 text-left text-sm p-2">

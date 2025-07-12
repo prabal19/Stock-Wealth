@@ -207,7 +207,7 @@ const page = () => {
           href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
           passHref
         >
-          <div className="bg-white rounded-[12px] overflow-hidden w-full">
+          <div className="bg-white rounded-[18px] overflow-hidden w-full">
             <Posts
               pimg={`/articles/${post.imgUrl}`}
               pheading={post.title}
@@ -228,12 +228,12 @@ const page = () => {
           href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
           passHref
         >
-          <div className="bg-white rounded-[12px] p-3 shadow-sm hover:shadow-md transition my-4">
+          <div className="bg-white rounded-[18px] p-3 shadow-sm hover:shadow-md transition my-4">
             <div className="flex items-start gap-3">
               <img
                 src={`/articles/${post.imgUrl}`}
                 alt={post.title}
-                className="w-20 h-20 object-cover rounded-[10px]"
+                className="w-20 h-20 object-cover rounded-[16px]"
               />
               <div>
                 <h3 className="text-sm font-semibold leading-snug">

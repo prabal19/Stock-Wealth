@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     url: "/",
     title: "Stock Wealth",
     description: "",
-    images: ["/logo.svg"],
+    images: ["/logo.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Stock Wealth",
     description: "",
-    images: ["/logo.svg"],
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/logo.svg", 
+    icon: "/logo2.png", 
   },
 };
 
@@ -52,7 +52,7 @@ export default function RootLayout({
 
   <Header />
         {children}
-        <div className="h-20 bg-white">
+        <div className="h-16">
           <Footer />
         </div>
         </Provider>

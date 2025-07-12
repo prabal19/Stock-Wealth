@@ -75,187 +75,186 @@ const PostPage = async ({
   return (
     <div className="bg-white">
       <div className="mt-20 flex flex-col lg:flex-row gap-10 px-6 md:px-10 lg:px-16 xl:px-24">
-        {/* Main Article Section */}
-        <div className="flex-1">
-          <div className="max-w-7xl text-black mb-4">
-            <Breadcrumb />
-          </div>
+{/* Main Article Section */}
+<div className="flex-1 mt-4">
+  <div className="max-w-7xl text-black mb-4">
+    <Breadcrumb />
+  </div>
 
-          <h1 className="text-3xl text-black sm:text-4xl lg:text-5xl font-bold mb-6">
-            {article.title}
-          </h1>
+  {/* Category Badge */}
+  <span className="inline-block bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full mb-4">
+    {article.category}
+  </span>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6">
-            <div className="text-gray-800 w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3">
-              {/* Author Info */}
-              <div className="flex items-center gap-2">
-                <Image
-                  src={`/authors/${article.authorName}.jpg`}
-                  alt={article.authorName}
-                  width={50}
-                  height={50}
-                  className="rounded-full object-cover object-center size-12"
-                />
-                <Link href={`/authors/${article.authorName.replace(/[^A-Za-z0-9]+/g, "-").toLowerCase()}`}>
-                <p className="text-lg hover:text-blue-600 lg:text-md">
-                  {article.authorName}
-                </p>
-                </Link>
-              </div>
+  {/* Article Title */}
+  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
+    {article.title}
+  </h1>
 
-              {/* Date + Read Time */}
-              <div className="w-full flex justify-between items-center lg:pr-1 lg:w-auto lg:justify-start gap-4 text-sm lg:text-base text-gray-500">
-                <p>
-                  <CreationDate articleNumber={article.articleNumber} />
-                </p>
-                <p>
-                  Read Time: {article.readTime}
-                </p>
+  {/* Author Info + Date + Read Time */}
+  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6">
+    <div className="text-gray-800 w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3">
+      
+      {/* Author Profile */}
+      <div className="flex items-center gap-2">
+        <Image
+          src={`/authors/${article.authorName}.jpg`}
+          alt={article.authorName}
+          width={50}
+          height={50}
+          className="rounded-full object-cover size-12"
+        />
+        <Link href={`/authors/${article.authorName.replace(/[^A-Za-z0-9]+/g, "-").toLowerCase()}`}>
+          <p className="text-lg font-medium hover:text-blue-600">{article.authorName}</p>
+        </Link>
+      </div>
+
+      {/* Date and Read Time */}
+      <div className="w-full flex justify-between items-center lg:w-auto gap-4 text-sm text-gray-500">
+        <CreationDate articleNumber={article.articleNumber} />
+        <span>•</span>
+        <p>{article.readTime}</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Main Featured Image */}
+  <Image
+    src={`/articles/${article.imgUrl}`}
+    width={1200}
+    height={800}
+    alt={article.title}
+    className="w-full rounded-xl object-cover max-w-5xl mx-auto mb-8"
+  />
+
+  {/* Main Article Content Section (unchanged logic) */}
+  <div className="text-black/85 tracking-normal mx-auto text-lg leading-relaxed space-y-4 max-w-3xl">
+    {article.contents.map((content, index) => {
+      const isHeading = content.includes("***");
+      if (isHeading) headingCount++;
+
+      return (
+        <React.Fragment key={index}>
+          {/* Trending Around the Web after 3rd heading */}
+          {headingCount === 3 && isHeading && (
+            <div className="mt-12 mb-10 p-6 rounded-xl bg-white shadow-sm">
+              <h3 className="text-2xl font-bold text-black mb-4">Trending Around the Web</h3>
+              <div className="flex flex-col divide-y divide-gray-200">
+                {allArticles
+                  .filter((post) => post.category === article.category && post.title !== article.title)
+                  .slice(0, 4)
+                  .map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={`/post/${item.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
+                      className="hover:bg-blue-50 rounded-lg px-3 py-4 transition"
+                    >
+                      <p className="text-md font-semibold text-black">{item.title}</p>
+                    </Link>
+                  ))}
               </div>
             </div>
-          </div>
+          )}
 
-          <Image
-            src={`/articles/${article.imgUrl}`}
-            width={1000}
-            height={1000}
-            alt={article.title}
-            className="w-full max-w-5xl mx-auto rounded-lg"
-          />
-
-<div className="text-black/85 tracking-normal mx-auto mt-6 text-lg leading-relaxed space-y-4 max-w-3xl">
-            {article.contents.map((content, index) => {
-              const isHeading = content.includes("***");
-              if (isHeading) headingCount++;
-
-              return (
-                <React.Fragment key={index}>
-                  {/* Show Trending Around the Web after 3rd heading */}
-                  {headingCount === 3 && isHeading && (
-                    <div className="mt-12 mb-10 p-6 rounded-xl bg-white shadow-sm">
-                    <h3 className="text-2xl font-bold text-black mb-4">
-                      Trending Around the Web
-                    </h3>
-                    <div className="flex flex-col divide-y divide-gray-200">
-                      {allArticles
-                        .filter(
-                          (post) =>
-                            post.section === article.section && post.title !== article.title
-                        )
-                        .slice(0, 4)
-                        .map((item, idx) => (
-                          <Link
-                            key={idx}
-                            href={`/post/${item.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
-                            className="hover:bg-blue-50 rounded-lg px-3 py-4 transition"
-                          >
-                            <p className="text-md font-semibold text-black">{item.title}</p>
-                          </Link>
-                        ))}
-                    </div>
-                  </div>
-                  
-                  )}
-
-                  {/* Show Discover More from Section after 5th heading */}
-                  {headingCount === 4 && isHeading && (
-                    <div className="mt-12 mb-10 p-5 rounded-xl bg-blue-50 ">
-                      <h3 className="text-xl  font-semibold text-blue-900 mb-4">
-                        💡 Discover More from {article.section}
-                      </h3>
-                      <div className="flex flex-col sm:flex-row items-center gap-4">
-                        {allArticles
-                          .filter(
-                            (post) =>
-                              post.section === article.section &&
-                              post.title !== article.title
-                          )
-                          .slice(4, 5)
-                          .map((item, index) => (
-                            <Link
-                              key={index}
-                              href={`/post/${item.title.replace(
-                                /[^A-Za-z0-9]+/g,
-                                "-"
-                              )}`}
-                              className="flex items-center gap-4 w-full hover:bg-blue-100 transition rounded-lg p-2"
-                            >
-                              <Image
-                                src={`/articles/${item.imgUrl}`}
-                                alt={item.title}
-                                width={100}
-                                height={80}
-                                className="rounded-md object-cover w-[100px] h-[80px] shrink-0"
-                              />
-                              <div className="text-left">
-                                <p className="text-sm uppercase text-blue-600 font-medium mb-1">
-                                  {item.section}
-                                </p>
-                                <p className="text-base text-gray-800 font-semibold">
-                                  {item.title}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
+          {/* Discover More after 5th heading */}
+          {headingCount === 4 && isHeading && (
+            <div className="mt-12 mb-10 p-5 rounded-xl bg-blue-50">
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">
+                💡 Discover More from {article.category}
+              </h3>
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                {allArticles
+                  .filter((post) => post.category === article.category && post.title !== article.title)
+                  .slice(4, 5)
+                  .map((item, index) => (
+                    <Link
+                      key={index}
+                      href={`/post/${item.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
+                      className="flex items-center gap-4 w-full hover:bg-blue-100 transition rounded-lg p-2"
+                    >
+                      <Image
+                        src={`/articles/${item.imgUrl}`}
+                        alt={item.title}
+                        width={100}
+                        height={80}
+                        className="rounded-md object-cover w-[100px] h-[80px] shrink-0"
+                      />
+                      <div className="text-left">
+                        <p className="text-sm uppercase text-blue-600 font-medium mb-1">
+                          {item.category}
+                        </p>
+                        <p className="text-base text-gray-800 font-semibold">
+                          {item.title}
+                        </p>
                       </div>
-                    </div>
-                  )}
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          )}
 
-                  {/* Main Content Rendering */}
-                  {/\.(jpg)$/i.test(content) ? (
-                    <Image
-                      width={600}
-                      height={400}
-                      src={`/articles/${content}`}
-                      alt="Image"
-                      className="mt-4 w-full rounded-lg"
-                    />
-                  ) : isHeading ? (
-                    <strong className="block text-2xl sm:text-3xl mt-8">
-                      {content.replace(/\*\*\*/g, "")}
-                    </strong>
-                  ) : (
-                    <p>{content}</p>
-                  )}
-                </React.Fragment>
-              );
-            })}
-          </div>
-        </div>
-
-        
-        {/* Sidebar: Trending Now */}
-<div className="mt-16 w-full  lg:max-w-xs">
-  <h2 className="text-black  hover:text-blue-700 hover:cursor-pointer font-bold text-2xl lg:text-3xl mb-6">
-    Trending Now
-  </h2>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-    {allArticles
-      .filter(
-        (post) =>
-          post.section === article.section &&
-          post.title !== article.title
-      )
-      .slice(0, 5)
-      .map((post, index) => (
-        <Link
-          key={index}
-          href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
-          passHref
-        >
-          <div className="w-full">
-            <Posts
-              pimg={`/articles/${post.imgUrl}`}
-              pheading={post.title}
-              pcontent={post.contents}
-              articleNumber={post.articleNumber}
+          {/* Render paragraphs and headings */}
+          {/\.(jpg)$/i.test(content) ? (
+            <Image
+              width={600}
+              height={400}
+              src={`/articles/${content}`}
+              alt="Image"
+              className="mt-4 w-full rounded-lg"
             />
-          </div>
-        </Link>
-      ))}
+          ) : isHeading ? (
+            <strong className="block text-2xl sm:text-3xl mt-8">
+              {content.replace(/\*\*\*/g, "")}
+            </strong>
+          ) : (
+            <p>{content}</p>
+          )}
+        </React.Fragment>
+      );
+    })}
   </div>
 </div>
+
+   <aside className="w-full lg:w-[320px] shrink-0 mt-20">
+    <h2 className="text-black font-bold text-2xl lg:text-3xl mb-6">
+      Trending Now
+    </h2>
+
+    <div className="flex flex-col gap-5">
+      {allArticles
+        .filter(
+          (post) =>
+            post.section === article.section &&
+            post.title !== article.title
+        )
+        .slice(0, 6)
+        .map((post, index) => (
+          <Link
+            key={index}
+            href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
+            className="group flex items-center gap-4 bg-white border border-gray-200 rounded-xl p-3 hover:shadow-md transition"
+          >
+            <div className="relative w-[100px] h-[75px] shrink-0">
+              <Image
+                src={`/articles/${post.imgUrl}`}
+                alt={post.title}
+                fill
+                className="object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs uppercase text-blue-600 font-semibold mb-1">
+                {post.section}
+              </p>
+              <p className="text-base text-gray-900 font-semibold group-hover:text-blue-700 transition">
+                {post.title}
+              </p>
+            </div>
+          </Link>
+        ))}
+    </div>
+  </aside>
+
 
         
       </div>
@@ -314,7 +313,7 @@ const PostPage = async ({
             {allArticles
               .filter(
                 (post) =>
-                  post.section === article.section &&
+                  post.category === article.category &&
                   post.title !== article.title
               )
               .slice(15, 19)

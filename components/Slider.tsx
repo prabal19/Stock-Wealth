@@ -18,7 +18,8 @@ const getRandomArticles = (count: number) => {
 
 const Slider = () => {
   const [showNavigation, setShowNavigation] = useState(false);
-  const [slides, setSlides] = useState(() => getRandomArticles(3));
+  const [slides] = useState(() => getRandomArticles(3));
+
 
   useEffect(() => {
     const handleResize = () => {

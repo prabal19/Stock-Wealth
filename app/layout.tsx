@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stockwealth.us/"),
-  title: { default: "Stock Wealth", template: `%s | Nexus News` },
+  title: { default: "Stock Wealth", template: `%s | Stock Wealth` },
   description: "Stay updated with the latest tech and global news.",
   openGraph: {
     url: "/",

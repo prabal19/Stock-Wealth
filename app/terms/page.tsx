@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
         <header className="bg-gray-900 text-white py-10 text-center">
           <h1 className="text-4xl mt-14 font-bold">Terms and Conditions</h1>
           <p className="text-md mt-2 text-gray-300">
-            Please read these terms and conditions carefully before using Nexus News.
+            Please read these terms and conditions carefully before using Stock Wealth.
           </p>
         </header>
 
@@ -32,7 +32,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              By accessing or using Nexus News, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of the terms, you should not use our website.
+              By accessing or using Stock Wealth, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of the terms, you should not use our website.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
               These terms apply to all visitors, users, and others who access or use the service.
@@ -43,10 +43,10 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Use of Content</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              The content provided on Nexus News is for informational purposes only. It is not intended as financial, investment, or legal advice. Users should conduct their own due diligence before making investment decisions.
+              The content provided on Stock Wealth is for informational purposes only. It is not intended as financial, investment, or legal advice. Users should conduct their own due diligence before making investment decisions.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
-              You may not reproduce, distribute, or modify any content without express written permission from Nexus News.
+              You may not reproduce, distribute, or modify any content without express written permission from Stock Wealth.
             </p>
           </section>
 
@@ -66,7 +66,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              All content, including articles, graphics, logos, and design elements, is the property of Nexus News and protected by copyright and trademark laws.
+              All content, including articles, graphics, logos, and design elements, is the property of Stock Wealth and protected by copyright and trademark laws.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
               Unauthorized use of our content is strictly prohibited and may result in legal action.
@@ -77,7 +77,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              Nexus News will not be liable for any losses or damages arising from the use or inability to use the website, including but not limited to direct, indirect, incidental, or consequential damages.
+              Stock Wealth will not be liable for any losses or damages arising from the use or inability to use the website, including but not limited to direct, indirect, incidental, or consequential damages.
             </p>
           </section>
 

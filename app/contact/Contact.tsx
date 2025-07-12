@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
       <div className="bg-gray-50 text-gray-800 min-h-screen">
         {/* Header */}
         <header className="bg-gray-900 text-white py-10 text-center">
-          <h1 className="text-4xl mt-14 font-bold">Contact Nexus News</h1>
+          <h1 className="text-4xl mt-14 font-bold">Contact Stock Wealth</h1>
           <p className="text-md mt-2 text-gray-300">
             Reach out with questions, feedback, or just to say hello — we’d love to hear from you.
           </p>
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
               <strong>Address:</strong> New York, Carmel, 10512
             </p>
             <p className="text-gray-700 mb-2">
-              <strong>Email:</strong> support@nexusnews.com
+              <strong>Email:</strong> support@stockwealth.com
             </p>
           </section>
         </main>

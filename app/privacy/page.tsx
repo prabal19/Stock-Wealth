@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
         <header className="bg-gray-900 text-white py-10 text-center">
           <h1 className="text-4xl mt-14 font-bold">Privacy Policy</h1>
           <p className="text-md mt-2 text-gray-300">
-            Learn how Nexus News collects, uses, and protects your personal information.
+            Learn how Stock Wealth collects, uses, and protects your personal information.
           </p>
         </header>
 
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Your Privacy Matters</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              Nexus News is committed to protecting your privacy. This policy explains what information we collect, how we use it, and the choices you have. We are transparent about our practices and dedicated to safeguarding your data.
+              Stock Wealth is committed to protecting your privacy. This policy explains what information we collect, how we use it, and the choices you have. We are transparent about our practices and dedicated to safeguarding your data.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
               By using our website, you agree to the collection and use of information in accordance with this policy.

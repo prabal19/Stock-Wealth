@@ -16,7 +16,7 @@ const CookiesPolicy = () => {
         <header className="bg-gray-900 text-white py-10 text-center">
           <h1 className="text-4xl mt-14 font-bold">Cookies Policy</h1>
           <p className="text-md mt-2 text-gray-300">
-            Learn how Nexus News uses cookies and similar technologies to enhance your browsing experience.
+            Learn how Stock Wealth uses cookies and similar technologies to enhance your browsing experience.
           </p>
         </header>
 
@@ -33,7 +33,7 @@ const CookiesPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">What Are Cookies?</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              Cookies are small data files stored on your device when you visit websites. They help improve functionality, analyze usage, and deliver personalized content. Nexus News uses cookies to enhance performance and tailor your experience.
+              Cookies are small data files stored on your device when you visit websites. They help improve functionality, analyze usage, and deliver personalized content. Stock Wealth uses cookies to enhance performance and tailor your experience.
             </p>
             <p className="text-gray-600 text-md leading-relaxed mt-4">
               Some cookies are essential for the operation of our website, while others help us understand user behavior and improve our content.
@@ -44,7 +44,7 @@ const CookiesPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">How We Use Cookies</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              At Nexus News, we use cookies for a variety of purposes, including:
+              At Stock Wealth, we use cookies for a variety of purposes, including:
             </p>
             <ul className="list-disc list-inside text-md text-gray-600 space-y-2 mt-4">
               <li><strong>Essential Cookies:</strong> Enable core functionality like security, network management, and accessibility.</li>
@@ -78,7 +78,7 @@ const CookiesPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Changes to This Policy</h2>
             <p className="text-gray-600 text-md leading-relaxed">
-              Nexus News may update this Cookies Policy from time to time. We encourage you to review this page periodically for any changes. Your continued use of our site signifies your agreement to the updated terms.
+              Stock Wealth may update this Cookies Policy from time to time. We encourage you to review this page periodically for any changes. Your continued use of our site signifies your agreement to the updated terms.
             </p>
           </section>
         </main>
